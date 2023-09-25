@@ -15,17 +15,27 @@ export default function TextForm(props) {
   const [text, setText] = useState("");
   return (
     <>
-      <div className="container">
-        <h1>{props.heading}</h1>
+      <div
+        className="container"
+        style={{
+          background: props.mode === "dark" ? "#042743" : "white",
+          color: props.mode === "light" ? "#042743" : "white",
+        }}
+      >
         <div className="mb-3">
-        <textarea
-          type="text"
-          className="form-control"
-          id="myBox"
-          rows="8"
-          value={text}
-          onChange={handleOnChange}
-        />
+          <h1>{props.heading}</h1>
+          <textarea
+            type="text"
+            className="form-control"
+            id="myBox"
+            rows="8"
+            value={text}
+            onChange={handleOnChange}
+            style={{
+              background: props.mode === "dark" ? "#042743" : "white",
+              color: props.mode === "light" ? "#042743" : "white",
+            }}
+          />
         </div>
         <button className="btn btn-primary mx-1" onClick={handleUpClick}>
           Convert to upcase
@@ -34,9 +44,17 @@ export default function TextForm(props) {
           Convert to Lowcase
         </button>
       </div>
-      <div className="container my-3">
+      <div
+        className="container my-3"
+        style={{
+          background: props.mode === "dark" ? "#042743" : "white",
+          color: props.mode === "light" ? "#042743" : "white",
+        }}
+      >
         <h1>Text summary</h1>
-        <p>{text.split(" ").length} words and {text.length} characters.</p>
+        <p>
+          {text.split(" ").length} words and {text.length} characters.
+        </p>
         <p>{text.split(" ").length * 0.008} minutes read.</p>
         <h2>Preview</h2>
         <p>{text}</p>
