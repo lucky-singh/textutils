@@ -1,53 +1,53 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export default function About() {
   const [myStyle, setMyStyle] = useState({
-    color: "black",
-    backgroundColor: "white",
+    color: 'black',
+    backgroundColor: 'white',
   });
 
-  const [styleText, setStyleText] = useState("Switch to dark mode");
+  const [styleText, setStyleText] = useState('Switch to dark mode');
 
   const toggleStyle = () => {
-    if (myStyle.color === "white") {
+    if (myStyle.color === 'white') {
       setMyStyle({
-        color: "black",
-        backgroundColor: "white",
+        color: 'black',
+        backgroundColor: 'white',
       });
-      setStyleText("Switch to dark mode")
+      setStyleText('Switch to dark mode')
     } else {
       setMyStyle({
-        color: "white",
-        backgroundColor: "black",
+        color: 'white',
+        backgroundColor: 'black',
       });
-      setStyleText("Switch to light mode")
+      setStyleText('Switch to light mode')
     }
   };
   return (
-    <div className="container" style={myStyle}>
-      <h1 className="my-3" style={myStyle}>
+    <div className='container' style={myStyle}>
+      <h1 className='my-3' style={myStyle}>
         About us
       </h1>
-      <div className="accordion" id="accordionPanelsStayOpenExample">
-        <div className="accordion-item">
-          <h2 className="accordion-header">
+      <div className='accordion' id='accordionPanelsStayOpenExample'>
+        <div className='accordion-item'>
+          <h2 className='accordion-header'>
             <button
               style={myStyle}
-              className="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseOne"
-              aria-expanded="true"
-              aria-controls="panelsStayOpen-collapseOne"
+              className='accordion-button'
+              type='button'
+              data-bs-toggle='collapse'
+              data-bs-target='#panelsStayOpen-collapseOne'
+              aria-expanded='true'
+              aria-controls='panelsStayOpen-collapseOne'
             >
               Accordion Item #1
             </button>
           </h2>
           <div
-            id="panelsStayOpen-collapseOne"
-            className="accordion-collapse collapse show"
+            id='panelsStayOpen-collapseOne'
+            className='accordion-collapse collapse show'
           >
-            <div className="accordion-body" style={myStyle}>
+            <div className='accordion-body' style={myStyle}>
               <strong>This is the first item's accordion body.</strong> It is
               shown by default, until the collapse plugin adds the appropriate
               classes that we use to style each element. These classes control
@@ -59,25 +59,25 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="accordion-item">
-          <h2 className="accordion-header">
+        <div className='accordion-item'>
+          <h2 className='accordion-header'>
             <button
               style={myStyle}
-              className="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseTwo"
-              aria-expanded="false"
-              aria-controls="panelsStayOpen-collapseTwo"
+              className='accordion-button collapsed'
+              type='button'
+              data-bs-toggle='collapse'
+              data-bs-target='#panelsStayOpen-collapseTwo'
+              aria-expanded='false'
+              aria-controls='panelsStayOpen-collapseTwo'
             >
               Accordion Item #2
             </button>
           </h2>
           <div
-            id="panelsStayOpen-collapseTwo"
-            className="accordion-collapse collapse"
+            id='panelsStayOpen-collapseTwo'
+            className='accordion-collapse collapse'
           >
-            <div className="accordion-body" style={myStyle}>
+            <div className='accordion-body' style={myStyle}>
               <strong>This is the second item's accordion body.</strong> It is
               hidden by default, until the collapse plugin adds the appropriate
               classes that we use to style each element. These classes control
@@ -89,25 +89,25 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="accordion-item">
-          <h2 className="accordion-header">
+        <div className='accordion-item'>
+          <h2 className='accordion-header'>
             <button
               style={myStyle}
-              className="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseThree"
-              aria-expanded="false"
-              aria-controls="panelsStayOpen-collapseThree"
+              className='accordion-button collapsed'
+              type='button'
+              data-bs-toggle='collapse'
+              data-bs-target='#panelsStayOpen-collapseThree'
+              aria-expanded='false'
+              aria-controls='panelsStayOpen-collapseThree'
             >
               Accordion Item #3
             </button>
           </h2>
           <div
-            id="panelsStayOpen-collapseThree"
-            className="accordion-collapse collapse"
+            id='panelsStayOpen-collapseThree'
+            className='accordion-collapse collapse'
           >
-            <div className="accordion-body" style={myStyle}>
+            <div className='accordion-body' style={myStyle}>
               <strong>This is the third item's accordion body.</strong> It is
               hidden by default, until the collapse plugin adds the appropriate
               classes that we use to style each element. These classes control
@@ -119,8 +119,8 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="container my-3">
-          <button className="btn btn-primary mx-1" onClick={toggleStyle}>
+        <div className='container my-3'>
+          <button className='btn btn-primary mx-1' onClick={toggleStyle}>
             {styleText}
           </button>
         </div>
